@@ -2,9 +2,6 @@ package com.cognizant.Pharmacy;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
