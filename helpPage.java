@@ -25,11 +25,7 @@ public class helpPage {
 	    driver=new ChromeDriver();
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-	}
-	
-	@BeforeMethod
-	public void login(){
-		driver.get("http://ctsc00849530701:9000/Pharma/");
+	    driver.get("http://ctsc00849530701:9000/Pharma/");
 		driver.findElement(pageObject.uname).click();
 		driver.findElement(pageObject.uname).sendKeys("admin");
 		driver.findElement(pageObject.pwd).click();
@@ -37,21 +33,23 @@ public class helpPage {
 		driver.findElement(pageObject.login).click();
 	}
 	
+	@BeforeMethod
+	public void openHelp(){
+		driver.findElement(pageObject.help).click();
+	}
+	
 	@Test (priority = 0)
 	public void helpPageTest(){
-		driver.findElement(pageObject.help).click();
 		driver.findElement(pageObject.help).isSelected();
 	}
 	
 	@Test (priority = 1)
 	public void helpMsgTest(){
-		driver.findElement(pageObject.help).click();
 		driver.findElement(pageObject.helpMsg).isDisplayed();
 	}
 	
 	@Test (priority = 2)
 	public void userManualTest(){
-		driver.findElement(pageObject.help).click();
 		driver.findElement(pageObject.userManual).isEnabled();
 	}
 	
