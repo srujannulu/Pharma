@@ -49,12 +49,11 @@ public class deletePage {
     	File src=new File("C:\\Users\\776492\\Documents\\Testing\\Selenium\\Codes\\Test_Automation_Inheritance\\ExcelFiles\\Pharmacy.xlsx");
 		FileInputStream fis=new FileInputStream(src);
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sh1=wb.getSheetAt(0);
+		XSSFSheet sh3=wb.getSheetAt(2);
 
-		int bc = (int) sh1.getRow(0).getCell(0).getNumericCellValue();
+		int bc = (int) sh3.getRow(0).getCell(0).getNumericCellValue();
 		driver.findElement(pageObject.batchCode).sendKeys(String.valueOf(bc));
 		Thread.sleep(2000);
-    	//driver.findElement(pageObject.batchCode).sendKeys("d25");
 		driver.findElement(pageObject.deletebutton).click();
 		String einvaliduname = "The batch details deleted successfully";
 		String invaliduname = driver.findElement(pageObject.idelete1).getText();
@@ -69,12 +68,11 @@ public class deletePage {
     	File src=new File("C:\\Users\\776492\\Documents\\Testing\\Selenium\\Codes\\Test_Automation_Inheritance\\ExcelFiles\\Pharmacy.xlsx");
 		FileInputStream fis=new FileInputStream(src);
 		XSSFWorkbook wb=new XSSFWorkbook(fis);
-		XSSFSheet sh1=wb.getSheetAt(0);
+		XSSFSheet sh3=wb.getSheetAt(2);
 
-		int bc = (int) sh1.getRow(1).getCell(0).getNumericCellValue();
+		int bc = (int) sh3.getRow(1).getCell(0).getNumericCellValue();
 		driver.findElement(pageObject.batchCode).sendKeys(String.valueOf(bc));
 		Thread.sleep(2000);
-    	//driver.findElement(pageObject.batchCode).sendKeys("852");
 		driver.findElement(pageObject.deletebutton).click();
 		String einvaliduname = "The batch code not present in system";
 		String invaliduname = driver.findElement(pageObject.idelete2).getText();
