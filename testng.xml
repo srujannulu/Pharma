@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name = "TestNG Suite" verbose="1">
+   <test name = "TestNG Validation">
+      <classes>
+         <class name = "com.cognizant.Pharmacy.loginPage"/>
+         <class name = "com.cognizant.Pharmacy.addBatchPage"/>
+         <class name = "com.cognizant.Pharmacy.searchPage"/>
+         <class name = "com.cognizant.Pharmacy.updatePage"/>
+         <class name = "com.cognizant.Pharmacy.deletePage"/>
+         <class name = "com.cognizant.Pharmacy.helpPage"/>
+         <class name = "com.cognizant.Pharmacy.logoutPage"/>
+         <class name = "com.cognizant.Pharmacy.fieldLevelValidation"/>
+      </classes>
+   </test>
+</suite>
